@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Однорукий бандит</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay">
+        <h1 class="neon-text">Однорукий бандит</h1>
+
+        <h2 class="neon-text">Введіть ваше ім'я, щоб розпочати гру:</h2>
+        
+        <div class="input-container">
+<input type="text" id="username" placeholder="Введіть ваше ім'я" maxlength="8" />
+            <button id="start-btn">Почати гру</button>
+			<button id="rules-btn" onclick="showRules()">Правила</button>
+        </div>
+    </div>
+<div id="rules-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeRules()">&times;</span>
+        <h2>Правила гри</h2>
+        <p>1. Гравець натискає на важіль, щоб обертати барабани.</p>
+        <p>2. Мета гри — отримати однакові символи на всіх трьох барабанах.</p>
+        <p>3. Якщо випадають однакові символи, ви виграєте!</p>
+        <p>4. Результати автоматично обчислюються після кожного обертання.</p>
+        <button id="close-rules-btn" onclick="closeRules()">Закрити</button>
+    </div>
+</div>
+    <div class="game-container" style="display: none;">
+        <h1 class="neon-text">Однорукий бандит</h1>
+        <div class="slot-machine">
+            <div class="slot" id="slot1"></div>
+            <div class="slot" id="slot2"></div>
+            <div class="slot" id="slot3"></div>
+        </div>
+        <div class="decorations">
+            <div class="top-decoration"></div>
+            <div class="side-decoration"></div>
+            <div class="bottom-decoration"></div>
+        </div>
+        <div class="lever-container">
+            <button id="lever-btn" class="lever">
+                <div class="lever-handle"></div>
+            </button>
+        </div>
+        
+        <div class="result" style="display: none;">
+            <p id="result-message" class="neon-result"></p>
+            <button id="restart-btn">Почати заново</button>
+        </div>
+    </div>
+	
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
